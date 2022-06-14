@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Jurcenter.info
+Author: psycheadmax
+Description: Theme for jurcenter.info
+Requires at least: 5.3
+Tested up to: 6.0
+Requires PHP: 5.6
+Version: 1.6
+
+Text Domain: jurcenter.info
+Tags:
+
+Jurcenter.info Theme, (C) 2022
+*/
+
+body {
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.content__banner {
+    border: 1px solid black;
+    padding: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: red;
+    color: white;
+}
+
+.banner--inside {
+    padding: 10px;
+    border: 10px solid white;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: blue;
+}
+
+.banner__item {
+    padding: 0 30px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__item {
+    width: 30%;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
