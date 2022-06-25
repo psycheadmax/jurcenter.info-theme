@@ -15,16 +15,73 @@ Tags:
 Jurcenter.info Theme, (C) 2022
 */
 
+ul {
+    list-style: none;
+}
+/* ================ */
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    /*header, content, footer (snapped to bottom if no or less content ) - all this within 1 column */
+    grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.header {
+    grid-area: header;
+    padding: 15px;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+    align-items: center;
+}
+
+.header__logo {
+    width: 70px;
+    height: 70px;
+    /* logo is a circle */
+    border-radius: 50%;
+    background-color: white;
+    grid-column: 2 / 3;
+}
+
+.header__menu {
+    grid-column: 3 / 4;
+}
+
+.header__list {
+    display: grid;
+    /* grid elements horizontal layout */
+    grid-auto-flow: column;
+    justify-items: end;
+}
+
+.main {
+    grid-area: main;
+    padding: 30px 15px;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+
+.sidebar {
+    grid-column: 2 / 3;
+}
+
+.content {
+    grid-column: 3 / 4;
+    padding: 0 0 0 30px;
+}
+
 body {
     box-sizing: border-box;
     background-color: white;
     font-size: 22px;
     font-family: sans-serif;
-}
-
-.wrapper {
-    max-width: 1080px;
-    margin: 0 auto;
 }
 
 .content__banner {
